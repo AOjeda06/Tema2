@@ -22,7 +22,7 @@ public class Ej6 {
 		// Calcular el discriminante
 		discriminante = b * b - 4 * a * c;
 
-		// Evaluar las soluciones según el valor del discriminante
+		// Comprobar los valores de a y b
 		if (a == 0) {
 			if (b != 0) {
 				x = (-c) / b;
@@ -30,7 +30,7 @@ public class Ej6 {
 			} else {
 				System.out.println("No hay solución, ya que a y b son 0.");
 			}
-		} else if (discriminante > 0) {
+		} else if (discriminante > 0) { // Evaluar las soluciones según el valor del discriminante
 			// Dos soluciones reales
 			x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
 			x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
