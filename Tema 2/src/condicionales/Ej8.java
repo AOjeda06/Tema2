@@ -4,17 +4,20 @@ import java.util.Scanner;
 
 public class Ej8 {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in); // Configuramos el scanner
+
+		// Variables
+		int mes, año, dias;
 
 		// Solicitar el número del mes
 		System.out.println("Introduce el número del mes (1-12):");
-		int mes = scanner.nextInt();
+		mes = scanner.nextInt();
 
 		// Solicitar el año
 		System.out.println("Introduce el año:");
-		int año = scanner.nextInt();
+		año = scanner.nextInt();
 
-		int dias = 0;
+		dias = 0;
 
 		// Calcular días del mes
 		switch (mes) {
@@ -43,6 +46,7 @@ public class Ej8 {
 			scanner.close();
 			return;
 		}
+		scanner.close();
 
 		System.out.printf("El mes");
 	}
