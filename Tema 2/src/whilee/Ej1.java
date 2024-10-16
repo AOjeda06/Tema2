@@ -6,22 +6,23 @@ public class Ej1 {
 
 	public static void main(String[] args) {
 		// Configuramos el scanner
-		Scanner scanner = new Scanner(System.in); 
-		
+		Scanner scanner = new Scanner(System.in);
+
 		// Variables
 		int suma = 0;
 		int numero;
 
+		// Empieza a pedir numeros
+		System.out.println("Introduce un número entero positivo (o un número negativo para terminar):");
+		numero = scanner.nextInt();
+		
 		// Pedir al usuario números hasta que introduzca un número negativo
-		while (true) {
+		while (numero >= 0) {
+			
+			suma += numero; // Sumar el número a la suma total
+
 			System.out.println("Introduce un número entero positivo (o un número negativo para terminar):");
 			numero = scanner.nextInt();
-
-			if (numero < 0) {
-				break; // Salir del bucle si el número es negativo
-			}
-
-			suma += numero; // Sumar el número a la suma total
 		}
 
 		// Mostrar la suma total de los números positivos introducidos
