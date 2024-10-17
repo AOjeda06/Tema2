@@ -29,7 +29,7 @@ public class Ej1 {
 		System.out.println("La suma de los números positivos introducidos es: " + suma);
 
 		// Cerramos el scanner
-		scanner.close(); // Cierra el bucle
+		scanner.close(); 
 	}
 
 }
