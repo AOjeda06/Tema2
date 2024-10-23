@@ -1,25 +1,25 @@
 package foor;
 
-import java.util.Scanner;
-
 public class Ej4 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in); // Creamos el scanner
 
-		// Declaramos variables
-		int num;
+		// Variables
+		int total = 0, contador = 0;
 
-		// Pide el numero y guarda la respuesta
-		System.out.println("Dime un numero: ");
-		num = scanner.nextInt();
+		// Muestra texto por pantalla
+		System.out.println("Los 10 primeros números impares son: ");
 
 		// Bucle
-		for (int i = 0; i <= num; i += 3) {
-			System.out.println(i);
-
+		for (int i = 0; contador < 10; i++) {
+			if (i % 2 != 0) {
+				total += i;
+				contador++;
+			}
 		}
-		scanner.close(); // Cerramos el scanner
+
+		// Respuesta
+		System.out.println("La suma de los 10 primeros numeros impares es: " + total);
 	}
 
 }
