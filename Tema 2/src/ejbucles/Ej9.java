@@ -10,21 +10,25 @@ public class Ej9 {
 
 		// Variables
 		int num;
-		String numero;
-		int numChars;
-		
-		// Pide y guarda el numero
-		System.out.println("Escribe un numero: ");
+		int numChars = 0;
+
+		// Pide y guarda el número
+		System.out.println("Escribe un número:");
 		num = scanner.nextInt();
-		
-		//Transforma el int a string y el numero de chars del string a un int
-		numero = Integer.toString(num);
-		
-		numChars = numero.length();
-		
+
+		// Contar el número de cifras usando un bucle y división entre 10
+		int tempNum = num;
+		if (tempNum == 0) {
+			numChars = 1; // Caso especial para el número 0
+		} else {
+			while (tempNum != 0) {
+				tempNum /= 10; // Dividir el número entre 10
+				numChars++; // Incrementar el contador de cifras
+			}
+		}
+
 		// Respuesta
-		System.out.println("El numero introducido tiene "+numChars+ " cifras.");
-		
+		System.out.println("El número introducido tiene " + numChars + " cifras.");
 		// Cerramos el scanner
 		scanner.close();
 	}

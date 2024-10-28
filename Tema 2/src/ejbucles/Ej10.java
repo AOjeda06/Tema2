@@ -10,24 +10,36 @@ public class Ej10 {
 
 		// Variables
 		boolean esCapicua = true;
-		int longitud;
-		String numeroStr;
 		int numero;
+		int longitud = 0;
+		int original;
+		int leftDigit;
+		int rightDigit;
 
 		// Solicitar al usuario un número
 		System.out.println("Introduce un número:");
 		numero = scanner.nextInt();
+		original = numero;
 
-		// Convertir el número a una cadena de texto y la cantidad de caracteres a un string
-		numeroStr = Integer.toString(numero);
-		longitud = numeroStr.length();
+		// Contar el número de cifras
+		int tempNum = numero;
+		while (tempNum != 0) {
+			tempNum /= 10;
+			longitud++;
+		}
 
-		// Bucle
-		// Fijamos i en 0, y repetimos hasta la mitad del numero de cifras que tenga el numero
+		// Bucle para comprobar si es capicúa
 		for (int i = 0; i < longitud / 2; i++) {
-			/* Si el numero en la posición i del String, no es igual al numero en la posición longitud - i -1
-			el numero no será capicua*/
-			if (numeroStr.charAt(i) != numeroStr.charAt(longitud - 1 - i)) {
+			/*
+			 * Calcula numero dividido 10 elevado a (longitud-1-i); eliminando todas las
+			 * cifras a la derecha de la deseada y luego hace modulo 10 para eliminar
+			 * posibles cifras no deseadas a la izquierda de la deseada. Hay que hacer 
+			 * un cast a int para truncar el numero.
+			 */
+			leftDigit = (numero / (int) Math.pow(10, longitud - 1 - i)) % 10;
+			rightDigit = (numero / (int) Math.pow(10, i)) % 10;
+
+			if (leftDigit != rightDigit) {
 				esCapicua = false;
 				break;
 			}
@@ -35,10 +47,9 @@ public class Ej10 {
 
 		// Mostrar el resultado
 		if (esCapicua) {
-			System.out.println("El número " + numero + " es capicúa.");
+			System.out.println("El número " + original + " es capicúa.");
 		} else {
-			System.out.println("El número " + numero + " no es capicúa.");
-
+			System.out.println("El número " + original + " no es capicúa.");
 		}
 
 		// Cerramos el scanner
