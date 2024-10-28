@@ -14,6 +14,7 @@ public class Ej8 {
 		int contadorFallos = 0;
 		int prevNum = 0;
 
+		// Bucle
 		while (true) {
 			System.out.println("Di un numero: ");
 			num = scanner.nextInt();
@@ -28,9 +29,10 @@ public class Ej8 {
 
 		}
 
-		//Resultado final
-		System.out.println("");
-		
+		// Resultado final
+		System.out.println("El numero de numeros introducidos ha sido: " + contador + "; y el número de fallos: "
+				+ contadorFallos);
+
 		// Cerramos el scanner
 		scanner.close();
 	}
