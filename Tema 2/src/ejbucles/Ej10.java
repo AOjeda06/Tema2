@@ -12,17 +12,21 @@ public class Ej10 {
 		boolean esCapicua = true;
 		int longitud;
 		String numeroStr;
+		int numero;
 
 		// Solicitar al usuario un número
 		System.out.println("Introduce un número:");
-		int numero = scanner.nextInt();
+		numero = scanner.nextInt();
 
-		// Convertir el número a una cadena de texto
+		// Convertir el número a una cadena de texto y la cantidad de caracteres a un string
 		numeroStr = Integer.toString(numero);
 		longitud = numeroStr.length();
 
-		// Comprobar si es capicúa usando un bucle
+		// Bucle
+		// Fijamos i en 0, y repetimos hasta la mitad del numero de cifras que tenga el numero
 		for (int i = 0; i < longitud / 2; i++) {
+			/* Si el numero en la posición i del String, no es igual al numero en la posición longitud - i -1
+			el numero no será capicua*/
 			if (numeroStr.charAt(i) != numeroStr.charAt(longitud - 1 - i)) {
 				esCapicua = false;
 				break;

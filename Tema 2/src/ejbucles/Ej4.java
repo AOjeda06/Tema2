@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Ej4 {
 
 	public static void main(String[] args) {
+		// Configuramos el scanner
 		Scanner scanner = new Scanner(System.in);
 
 		// Variables
@@ -19,9 +20,13 @@ public class Ej4 {
 
 		// Encontrar el mayor de los dos números
 		max = Math.max(a, b);
+		
+		// Fijamos el mcm en el valor del mayor de los dos numeros
 		mcm = max;
 
-		// Incrementar hasta encontrar el primer múltiplo común
+		// Bucle
+		/* Repite hasta que: el modulo del mayor de los dos numero o entre sí o entre el otro número, sea distinto de cero
+		y se le suma 1 a mcm, cuando el modulo sea 0 en ambos se habrá encontrado el primer multiplo comun de ambos */
 		while (mcm % a != 0 || mcm % b != 0) {
 			mcm++;
 		}

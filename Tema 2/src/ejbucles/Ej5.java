@@ -19,7 +19,9 @@ public class Ej5 {
 		if (num < 1 || num > 20) {
 			System.out.println("Numero no valido");
 		} else {
+			// Fijamos i en 1, y repetimos hasta el valor de num
 			for (int i = 1; i <= num; i++) {
+				// Fijamos j en 1 y rpetimos hasta que j=i
 				for (int j = 1; j <= i; j++) {
 					System.out.print(i);
 				}

@@ -16,14 +16,18 @@ public class Ej8 {
 
 		// Bucle
 		while (true) {
+			// Empieza a pedir numeros
 			System.out.println("Di un numero: ");
 			num = scanner.nextInt();
+			// Si escribe 0 para el programa
 			if (num == 0) {
 				break;
+			// Compara el numero introducido con el último y ve si es un fallo o no
 			} else if (num < prevNum) {
 				System.out.println("Numero no valido");
 				contadorFallos++;
 			}
+			// Cuenta el total de numeros introducidos y guarda el valor de numero para el siguiente bucle
 			contador++;
 			prevNum = num;
 

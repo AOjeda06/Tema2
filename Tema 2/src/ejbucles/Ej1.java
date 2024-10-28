@@ -27,7 +27,7 @@ public class Ej1 {
 		// Realiza el incremento
 		seg += incremento;
 
-		// Calcula las llevadas
+		// Calcula las llevadas, sumando 1 al siguente valor mientras el anterior sea 60 o mayor
 		while (seg >= 60) {
 			seg -= 60;
 			min++;

@@ -11,20 +11,23 @@ public class Ej6 {
 		// Variables
 		int proporcion;
 
+		// Pide el numero y guarda el valor
 		System.out.println("Introduce un numero para las medidas del triangulo");
 		proporcion = scanner.nextInt();
 
-		// Dibujar el triángulo equilátero
+		// Bucle
+		// Fijamos i en 1, y repetimos hasta que i = numero introducido
 		for (int i = 1; i <= proporcion; i++) {
-			// Imprimir espacios en blanco para centrar los asteriscos
+			// Imprimir espacios en blanco antes del primer asterisco para centrar los asteriscos
 			for (int j = 1; j <= proporcion - i; j++) {
 				System.out.print(" ");
 			}
-			// Imprimir los asteriscos
+			// Imprimir los asteriscos con un espacio a la derecha para que estén separados el uno del otro
 			for (int j = 1; j <= i; j++) {
-				System.out.print("* "); // Evita que se amontonten gracias al espacio a la derecha
+				System.out.print("* "); 
 			}
-			System.out.println(); // Saltar a la siguiente línea
+			// Saltar a la siguiente línea
+			System.out.println(); 
 		}
 
 		// Cerramos el scanner
