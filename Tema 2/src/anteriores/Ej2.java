@@ -21,16 +21,16 @@ public class Ej2 {
 			num = scanner.nextInt();
 		} while (num < 0);
 
-		if (num ==0) {
+		if (num == 0) {
 			System.out.println("0 es par.");
 			System.exit(0);
 		}
-		
+
 		// Asignamos a temp el valor de num
 		temp = num;
 
 		// Contamos las cifras de temp dividiendolo entre 10 hasta que de 0
-		for (int i = 1; temp != 0; i++) {
+		while (temp != 0) {
 			temp /= 10;
 			cifras++;
 		}
