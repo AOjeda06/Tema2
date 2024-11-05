@@ -10,15 +10,24 @@ public class Ej10 {
 
 		// Variables
 		boolean esCapicua = true;
-		int numero;
+		int numero = 0;
 		int longitud = 0;
 		int original;
 		int leftDigit;
 		int rightDigit;
 
 		// Solicitar al usuario un número
-		System.out.println("Introduce un número:");
-		numero = scanner.nextInt();
+		try {
+			// Solicitar al usuario un número
+			System.out.println("Introduce un número:");
+			numero = scanner.nextInt();
+		} catch (Exception e) {
+			System.out.println("Error: se ha introducido un valor no válido. Por favor, introduce un número entero.");
+		} finally {
+			scanner.close();
+			System.out.println("El bloque finally se ha ejecutado.");
+		}
+
 		original = numero;
 
 		// Contar el número de cifras
@@ -33,8 +42,8 @@ public class Ej10 {
 			/*
 			 * Calcula numero dividido 10 elevado a (longitud-1-i); eliminando todas las
 			 * cifras a la derecha de la deseada y luego hace modulo 10 para eliminar
-			 * posibles cifras no deseadas a la izquierda de la deseada. Hay que hacer 
-			 * un cast a int para truncar el numero.
+			 * posibles cifras no deseadas a la izquierda de la deseada. Hay que hacer un
+			 * cast a int para truncar el numero.
 			 */
 			leftDigit = (numero / (int) Math.pow(10, longitud - 1 - i)) % 10;
 			rightDigit = (numero / (int) Math.pow(10, i)) % 10;
