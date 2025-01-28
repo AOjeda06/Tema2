@@ -3,6 +3,7 @@ package condicionales;
 import java.util.Scanner;
 
 public class Ej8 {
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in); // Configuramos el scanner
 
